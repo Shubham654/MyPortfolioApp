@@ -25,31 +25,35 @@ class _IntroState extends State<Intro> {
             SizedBox(
               height: 40,
             ),
-            Row(
-              children: [
-                Text(
-                  "Hi !",
-                  style: TextStyle(
-                      fontWeight: FontWeight.w800, height: 1.3, fontSize: 32),
-                  textAlign: TextAlign.justify,
-                ),
-                FaIcon(
-                  FontAwesomeIcons.ad,
-                  size: 30,
-                  color: Colors.black87,
-                ),
-              ],
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Text(
+                    "Hi !",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w800, height: 1.3, fontSize: 32),
+                    textAlign: TextAlign.justify,
+                  ),
+                  SizedBox(
+                    width: 15,
+                  ),
+                  FaIcon(
+                    FontAwesomeIcons.handSparkles,
+                    size: 30,
+                    color: Colors.black87,
+                  ),
+                ],
+              ),
             ),
-            Text(" I'm Shubham ",
+            Text(" I'm Shubham. ",
                 style: TextStyle(
                     fontWeight: FontWeight.w800, height: 1.3, fontSize: 32),
                 textAlign: TextAlign.justify),
-            SizedBox(
-              height: 30,
-            ),
-            Center(
+            Padding(
+              padding: const EdgeInsets.all(8.0),
               child: Text(
-                "I help out Spider-man ",
+                "Welcome you to my Application. ",
                 style: TextStyle(
                   fontSize: 16,
                   height: 1.7,
@@ -103,7 +107,10 @@ class _IntroState extends State<Intro> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => Portfolio()));
+                    },
                     child: Container(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 15, vertical: 10),

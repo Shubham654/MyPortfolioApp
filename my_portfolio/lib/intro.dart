@@ -4,6 +4,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:my_portfolio/contact.dart';
 
 // ignore: unused_import
 import 'package:my_portfolio/contact_me.dart';
@@ -108,7 +109,7 @@ class _IntroState extends State<Intro> {
                 ),
                 OutlinedButton(
                   onPressed: () async {
-                    const url = 'https://www.linkedin.com/in/shubham654/';
+                    const url = 'https://twitter.com/Shubham654_';
 
                     if (await canLaunch(url)) {
                       await launch(url, forceSafariVC: false);
@@ -146,12 +147,9 @@ class _IntroState extends State<Intro> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   GestureDetector(
-                    onTap: () async {
-                      final Uri _emailLaunchUri = Uri(
-                        scheme: 'mailto',
-                        path: 'shubhamchambhare654@gmail.com',
-                      );
-                      launch(_emailLaunchUri.toString());
+                    onTap: () {
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => Contact()));
                     },
                     child: Container(
                       padding: const EdgeInsets.symmetric(

@@ -1,6 +1,10 @@
+import 'dart:ffi';
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 // ignore: unused_import
 import 'package:my_portfolio/contact_me.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -26,47 +30,117 @@ class _IntroState extends State<Intro> {
               height: 40,
             ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.only(left: 20),
               child: Row(
                 children: [
-                  Text(
-                    "Hi !",
-                    style: TextStyle(
-                        fontWeight: FontWeight.w800, height: 1.3, fontSize: 32),
-                    textAlign: TextAlign.justify,
+                  Padding(
+                    padding: const EdgeInsets.only(top: 18),
+                    child: Text(
+                      "Hello!",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w800,
+                          height: 1.3,
+                          fontSize: 32),
+                      textAlign: TextAlign.justify,
+                    ),
                   ),
-                  SizedBox(
-                    width: 15,
-                  ),
-                  FaIcon(
-                    FontAwesomeIcons.handSparkles,
-                    size: 30,
-                    color: Colors.black87,
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: Container(
+                      child: Image.network(
+                        "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/271/waving-hand_1f44b.png",
+                        height: 60,
+                        width: 90,
+                      ),
+                    ),
                   ),
                 ],
               ),
             ),
-            Text(" I'm Shubham. ",
+            Padding(
+              padding: const EdgeInsets.only(left: 10),
+              child: Text(" I'm Shubham,",
+                  style: TextStyle(
+                      fontWeight: FontWeight.w800, height: 1.3, fontSize: 32),
+                  textAlign: TextAlign.justify),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 19),
+              child: Text(
+                "I create awesome Products.",
                 style: TextStyle(
                     fontWeight: FontWeight.w800, height: 1.3, fontSize: 32),
-                textAlign: TextAlign.justify),
+              ),
+            ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.only(left: 20, right: 30, top: 10),
               child: Text(
-                "Welcome you to my Application. ",
+                "An intermediate Developer with a passion for building great products 😈.",
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 18,
                   height: 1.7,
                 ),
                 textAlign: TextAlign.center,
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 15,
             ),
-            SizedBox(
-              height: 20,
+            Row(
+              children: [
+                SizedBox(
+                  width: 45,
+                ),
+                OutlinedButton(
+                  onPressed: () async {
+                    const url = 'https://www.linkedin.com/in/shubham654/';
+
+                    if (await canLaunch(url)) {
+                      await launch(url, forceSafariVC: false);
+                    } else {
+                      throw 'Could not launch $url';
+                    }
+                  },
+                  child: Text("LinkedIn"),
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                OutlinedButton(
+                  onPressed: () async {
+                    const url = 'https://www.linkedin.com/in/shubham654/';
+
+                    if (await canLaunch(url)) {
+                      await launch(url, forceSafariVC: false);
+                    } else {
+                      throw 'Could not launch $url';
+                    }
+                  },
+                  child: Text("Twitter"),
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                OutlinedButton(
+                  onPressed: () async {
+                    const url = 'https://github.com/Shubham654';
+
+                    if (await canLaunch(url)) {
+                      await launch(url, forceSafariVC: false);
+                    } else {
+                      throw 'Could not launch $url';
+                    }
+                  },
+                  child: Text("GitHub"),
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+              ],
             ),
+            Image(
+                image: NetworkImage(
+                    "https://cdn.dribbble.com/users/1162077/screenshots/4649464/skatter-programmer.gif")),
             Center(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,

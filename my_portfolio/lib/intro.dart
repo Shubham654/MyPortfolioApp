@@ -2,12 +2,10 @@ import 'dart:ffi';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/about_myself.dart';
 
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:my_portfolio/contact.dart';
 
-// ignore: unused_import
-import 'package:my_portfolio/contact_me.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Intro extends StatefulWidget {
@@ -181,7 +179,7 @@ class _IntroState extends State<Intro> {
                   GestureDetector(
                     onTap: () {
                       Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => Portfolio()));
+                          MaterialPageRoute(builder: (context) => About()));
                     },
                     child: Container(
                       padding: const EdgeInsets.symmetric(

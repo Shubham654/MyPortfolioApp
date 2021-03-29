@@ -43,12 +43,16 @@ class _AboutState extends State<About> {
             ),
             Padding(
               padding: const EdgeInsets.only(left: 65, bottom: 100),
-              child: Image.network(
-                "https://im6.ezgif.com/tmp/ezgif-6-d4a3e9d79fe1.gif",
+              child: Image.asset(
+                "assets/images/cat.gif",
                 width: 320,
                 height: 200,
               ),
             ),
+            SizedBox(
+              height: 20,
+            ),
+            Center(child: Text(" Made with ❤️ By Shubham."))
           ],
         ),
       ),

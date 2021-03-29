@@ -19,11 +19,11 @@ class Portfolio extends StatelessWidget {
               height: 15,
             ),
             ClipRRect(
-              borderRadius: BorderRadius.circular(20.0),
-              child: Image(
-                image: AssetImage('images/passport pic.jpg'),
-                width: 200,
+              borderRadius: BorderRadius.circular(100.0),
+              child: Image.asset(
+                "assets/images/shubham.jpeg",
                 height: 200,
+                width: 200,
               ),
             ),
             SizedBox(

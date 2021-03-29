@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:my_portfolio/about_myself.dart';
 
 import 'package:my_portfolio/contact.dart';
+import 'package:my_portfolio/contact_me.dart';
 
 import 'package:url_launcher/url_launcher.dart';
 
@@ -26,14 +27,15 @@ class _IntroState extends State<Intro> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             SizedBox(
-              height: 40,
+              height: 50,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 20),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(top: 18),
+                    padding: const EdgeInsets.only(top: 20),
                     child: Text(
                       "Hello!",
                       style: TextStyle(
@@ -46,11 +48,8 @@ class _IntroState extends State<Intro> {
                   Padding(
                     padding: const EdgeInsets.only(top: 10),
                     child: Container(
-                      child: Image.network(
-                        "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/271/waving-hand_1f44b.png",
-                        height: 60,
-                        width: 90,
-                      ),
+                      child: Image.asset("assets/images/hand.png",
+                          height: 60, width: 90),
                     ),
                   ),
                 ],
@@ -85,61 +84,63 @@ class _IntroState extends State<Intro> {
             SizedBox(
               height: 15,
             ),
-            Row(
-              children: [
-                SizedBox(
-                  width: 45,
-                ),
-                OutlinedButton(
-                  onPressed: () async {
-                    const url = 'https://www.linkedin.com/in/shubham654/';
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    width: 20,
+                  ),
+                  OutlinedButton(
+                    onPressed: () async {
+                      const url = 'https://www.linkedin.com/in/shubham654/';
 
-                    if (await canLaunch(url)) {
-                      await launch(url, forceSafariVC: false);
-                    } else {
-                      throw 'Could not launch $url';
-                    }
-                  },
-                  child: Text("LinkedIn"),
-                ),
-                SizedBox(
-                  width: 20,
-                ),
-                OutlinedButton(
-                  onPressed: () async {
-                    const url = 'https://twitter.com/Shubham654_';
+                      if (await canLaunch(url)) {
+                        await launch(url, forceSafariVC: false);
+                      } else {
+                        throw 'Could not launch $url';
+                      }
+                    },
+                    child: Text("LinkedIn"),
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  OutlinedButton(
+                    onPressed: () async {
+                      const url = 'https://twitter.com/Shubham654_';
 
-                    if (await canLaunch(url)) {
-                      await launch(url, forceSafariVC: false);
-                    } else {
-                      throw 'Could not launch $url';
-                    }
-                  },
-                  child: Text("Twitter"),
-                ),
-                SizedBox(
-                  width: 20,
-                ),
-                OutlinedButton(
-                  onPressed: () async {
-                    const url = 'https://github.com/Shubham654';
+                      if (await canLaunch(url)) {
+                        await launch(url, forceSafariVC: false);
+                      } else {
+                        throw 'Could not launch $url';
+                      }
+                    },
+                    child: Text("Twitter"),
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  OutlinedButton(
+                    onPressed: () async {
+                      const url = 'https://github.com/Shubham654';
 
-                    if (await canLaunch(url)) {
-                      await launch(url, forceSafariVC: false);
-                    } else {
-                      throw 'Could not launch $url';
-                    }
-                  },
-                  child: Text("GitHub"),
-                ),
-                SizedBox(
-                  width: 20,
-                ),
-              ],
+                      if (await canLaunch(url)) {
+                        await launch(url, forceSafariVC: false);
+                      } else {
+                        throw 'Could not launch $url';
+                      }
+                    },
+                    child: Text("GitHub"),
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                ],
+              ),
             ),
-            Image(
-                image: NetworkImage(
-                    "https://cdn.dribbble.com/users/1162077/screenshots/4649464/skatter-programmer.gif")),
+            Image.asset("assets/images/programmer.gif"),
             Center(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -153,7 +154,7 @@ class _IntroState extends State<Intro> {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 15, vertical: 10),
                       child: Text(
-                        'CONTACT ME',
+                        'Contact Me',
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w800,
@@ -185,7 +186,39 @@ class _IntroState extends State<Intro> {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 15, vertical: 10),
                       child: Text(
-                        'SEE MY RESUME',
+                        'About Me',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w900,
+                          color: Colors.white,
+                        ),
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.blueAccent,
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Center(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => Portfolio()));
+                    },
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 15, vertical: 10),
+                      child: Text(
+                        'Portfolio',
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w900,

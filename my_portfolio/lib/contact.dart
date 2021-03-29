@@ -27,18 +27,13 @@ class Contact extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top: 35, right: 20, left: 20),
             child: Text(
-              "I ❤️ to share ideas and read Feedbacks. Feel free to reach me.             I check my inbox frequently. 😎",
+              "I ❤️ to share ideas and read Feedbacks. Feel free to reach me. I check my inbox frequently. 😎",
               style: TextStyle(
                   fontWeight: FontWeight.w600, height: 1.3, fontSize: 20),
               textAlign: TextAlign.center,
             ),
           ),
-          Container(
-            width: 345,
-            height: 300,
-            child: Image.network(
-                "https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif"),
-          ),
+          Image.asset("assets/images/prgm.gif"),
           Text(
             "Shubham Chambhare",
             style: TextStyle(
@@ -56,9 +51,10 @@ class Contact extends StatelessWidget {
             height: 35,
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                width: 10,
+                width: 8,
               ),
               GestureDetector(
                 onTap: () async {

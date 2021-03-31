@@ -107,7 +107,7 @@ class _PortfolioState extends State<Portfolio> {
             ),
             ExpansionTileCard(
               key: cardB,
-              leading: CircleAvatar(child: Icon(Icons.school)),
+              leading: CircleAvatar(child: Icon(Icons.my_library_books)),
               title: Text('Certificates'),
               subtitle: Text('My overall qualification'),
               children: <Widget>[
@@ -128,7 +128,7 @@ class _PortfolioState extends State<Portfolio> {
             ),
             ExpansionTileCard(
               key: cardC,
-              leading: CircleAvatar(child: Icon(Icons.school)),
+              leading: CircleAvatar(child: Icon(Icons.star_outline_outlined)),
               title: Text('Technical Skills'),
               subtitle: Text('My overall qualification'),
               children: <Widget>[
@@ -149,7 +149,7 @@ class _PortfolioState extends State<Portfolio> {
             ),
             ExpansionTileCard(
               key: cardD,
-              leading: CircleAvatar(child: Icon(Icons.school)),
+              leading: CircleAvatar(child: Icon(Icons.code_sharp)),
               title: Text('Languages'),
               subtitle: Text('My overall qualification'),
               children: <Widget>[
@@ -170,7 +170,7 @@ class _PortfolioState extends State<Portfolio> {
             ),
             ExpansionTileCard(
               key: cardE,
-              leading: CircleAvatar(child: Icon(Icons.school)),
+              leading: CircleAvatar(child: Icon(Icons.school_outlined)),
               title: Text('Projects'),
               subtitle: Text('My overall qualification'),
               children: <Widget>[

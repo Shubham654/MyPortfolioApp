@@ -14,18 +14,20 @@ class Contact extends StatelessWidget {
         iconTheme: IconThemeData(
           color: Colors.black,
         ),
-        title: Text("Want to contact Me?",
-            style: TextStyle(
-                color: Colors.black,
-                fontWeight: FontWeight.w800,
-                height: 1.3,
-                fontSize: 25)),
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.transparent,
+        elevation: 0,
       ),
       body: Column(
         children: [
+          Text("Want to contact Me?",
+              style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.w800,
+                  height: 1.3,
+                  fontSize: 30),
+              textAlign: TextAlign.center),
           Padding(
-            padding: const EdgeInsets.only(top: 35, right: 20, left: 20),
+            padding: const EdgeInsets.only(top: 25, right: 20, left: 20),
             child: Text(
               "I ❤️ to share ideas and read Feedbacks. Feel free to reach me. I check my inbox frequently. 😎",
               style: TextStyle(

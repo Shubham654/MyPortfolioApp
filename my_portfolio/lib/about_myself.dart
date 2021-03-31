@@ -12,6 +12,8 @@ class _AboutState extends State<About> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
         iconTheme: IconThemeData(
           color: Colors.black,
         ),
@@ -21,7 +23,7 @@ class _AboutState extends State<About> {
                 fontWeight: FontWeight.w800,
                 height: 1.3,
                 fontSize: 25)),
-        backgroundColor: Colors.white,
+        centerTitle: true,
       ),
       body: SingleChildScrollView(
         child: Wrap(

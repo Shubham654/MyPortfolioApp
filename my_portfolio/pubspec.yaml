@@ -32,6 +32,7 @@ dependencies:
   url_launcher: ^6.0.3
   flutter_gifimage: ^1.0.1
   expansion_tile_card: ^2.0.0
+  change_app_package_name: ^0.1.2
  
   
 

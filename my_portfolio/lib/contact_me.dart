@@ -9,7 +9,17 @@ class Portfolio extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('My Portfolio'),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        iconTheme: IconThemeData(
+          color: Colors.black,
+        ),
+        title: Text('My Portfolio',
+            style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.w800,
+                height: 1.3,
+                fontSize: 25)),
         centerTitle: true,
       ),
       body: Center(

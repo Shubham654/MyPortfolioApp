@@ -1,10 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:expansion_tile_card/expansion_tile_card.dart';
 
-class Portfolio extends StatelessWidget {
-  const Portfolio({Key key}) : super(key: key);
+class Portfolio extends StatefulWidget {
+  Portfolio({Key key}) : super(key: key);
 
+  @override
+  _PortfolioState createState() => _PortfolioState();
+}
+
+class _PortfolioState extends State<Portfolio> {
+  final GlobalKey<ExpansionTileCardState> cardA = new GlobalKey();
+  final GlobalKey<ExpansionTileCardState> cardB = new GlobalKey();
+  final GlobalKey<ExpansionTileCardState> cardC = new GlobalKey();
+
+  final GlobalKey<ExpansionTileCardState> cardD = new GlobalKey();
+  final GlobalKey<ExpansionTileCardState> cardE = new GlobalKey();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +34,7 @@ class Portfolio extends StatelessWidget {
                 fontSize: 25)),
         centerTitle: true,
       ),
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
           children: [
             SizedBox(
@@ -64,138 +76,119 @@ class Portfolio extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            GestureDetector(
-              onTap: () async {
-                final Uri _emailLaunchUri = Uri(
-                  scheme: 'mailto',
-                  path: 'shubhamchambhare654@gmail.com',
-                );
-                launch(_emailLaunchUri.toString());
-              },
-              child: Container(
-                width: 320,
-                height: 65,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.black,
-                    width: 3,
-                  ),
-                ),
-                child: Row(
-                  children: [
-                    SizedBox(
-                      width: 15,
-                    ),
-                    Icon(Icons.email, size: 30),
-                    SizedBox(
-                      width: 15,
-                    ),
-                    Text("shubhamchambhare654@gmail.com",
-                        style: TextStyle(fontSize: 15)),
-                  ],
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            GestureDetector(
-              onTap: () async {
-                const url = 'https://www.linkedin.com/in/chambhare654/';
-
-                if (await canLaunch(url)) {
-                  await launch(url, forceSafariVC: false);
-                } else {
-                  throw 'Could not launch $url';
-                }
-              },
-              child: Container(
-                width: 320,
-                height: 65,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.black,
-                    width: 3,
-                  ),
-                ),
-                child: Row(
-                  children: [
-                    SizedBox(
-                      width: 18,
-                    ),
-                    FaIcon(
-                      FontAwesomeIcons.linkedin,
-                      size: 30,
-                    ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Text("www.linkedin.com/chambhare654/",
-                        style: TextStyle(fontSize: 15)),
-                  ],
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            GestureDetector(
-              onTap: () async {
-                const url = 'https://github.com/Shubham654';
-
-                if (await canLaunch(url)) {
-                  await launch(url, forceSafariVC: false);
-                } else {
-                  throw 'Could not launch $url';
-                }
-              },
-              child: Container(
-                width: 320,
-                height: 65,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.black,
-                    width: 3,
-                  ),
-                ),
-                child: Row(
-                  children: [
-                    SizedBox(
-                      width: 18,
-                    ),
-                    FaIcon(
-                      FontAwesomeIcons.github,
-                      size: 30,
-                    ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Text("www.github.com/Shubham654",
-                        style: TextStyle(fontSize: 15)),
-                  ],
-                ),
-              ),
-            ),
             SizedBox(height: 15),
-            Wrap(
-              spacing: 15.0,
-              runSpacing: 10.0,
-              children: [
-                Chip(
-                  avatar: FaIcon(
-                    FontAwesomeIcons.python,
-                    color: Colors.black87,
-                  ),
-                  label: Text('python'),
+            ExpansionTileCard(
+              borderRadius: BorderRadius.circular(20.0),
+              key: cardA,
+              leading: CircleAvatar(child: Icon(Icons.school)),
+              title: Text('Education'),
+              subtitle: Text('My overall qualification'),
+              children: <Widget>[
+                Divider(
+                  thickness: 1.0,
+                  height: 1.0,
                 ),
-                Chip(
-                  label: Text('flutter'),
-                ),
-                Chip(
-                  label: Text('c'),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(children: [
+                    Text(
+                      "Third Year - Computer Technology",
+                      style: TextStyle(fontSize: 18),
+                      textAlign: TextAlign.center,
+                    ),
+                    SizedBox(height: 5),
+                    Text(
+                        " Kavikulguru Institute of Technology and Science, Ramtek",
+                        style: TextStyle(fontSize: 15),
+                        textAlign: TextAlign.center),
+                  ]),
                 ),
               ],
-            )
+            ),
+            ExpansionTileCard(
+              key: cardB,
+              leading: CircleAvatar(child: Icon(Icons.school)),
+              title: Text('Certificates'),
+              subtitle: Text('My overall qualification'),
+              children: <Widget>[
+                Divider(
+                  thickness: 1.0,
+                  height: 1.0,
+                ),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16.0,
+                        vertical: 8.0,
+                      ),
+                      child: Text("data")),
+                ),
+              ],
+            ),
+            ExpansionTileCard(
+              key: cardC,
+              leading: CircleAvatar(child: Icon(Icons.school)),
+              title: Text('Technical Skills'),
+              subtitle: Text('My overall qualification'),
+              children: <Widget>[
+                Divider(
+                  thickness: 1.0,
+                  height: 1.0,
+                ),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16.0,
+                        vertical: 8.0,
+                      ),
+                      child: Text("data")),
+                ),
+              ],
+            ),
+            ExpansionTileCard(
+              key: cardD,
+              leading: CircleAvatar(child: Icon(Icons.school)),
+              title: Text('Languages'),
+              subtitle: Text('My overall qualification'),
+              children: <Widget>[
+                Divider(
+                  thickness: 1.0,
+                  height: 1.0,
+                ),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16.0,
+                        vertical: 8.0,
+                      ),
+                      child: Text("data")),
+                ),
+              ],
+            ),
+            ExpansionTileCard(
+              key: cardE,
+              leading: CircleAvatar(child: Icon(Icons.school)),
+              title: Text('Projects'),
+              subtitle: Text('My overall qualification'),
+              children: <Widget>[
+                Divider(
+                  thickness: 1.0,
+                  height: 1.0,
+                ),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16.0,
+                        vertical: 8.0,
+                      ),
+                      child: Text("data")),
+                ),
+              ],
+            ),
           ],
         ),
       ),

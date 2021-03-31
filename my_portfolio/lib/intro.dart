@@ -218,7 +218,7 @@ class _IntroState extends State<Intro> {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 15, vertical: 10),
                       child: Text(
-                        'Portfolio',
+                        'Resume',
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w900,

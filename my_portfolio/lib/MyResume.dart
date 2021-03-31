@@ -14,7 +14,7 @@ class Portfolio extends StatelessWidget {
         iconTheme: IconThemeData(
           color: Colors.black,
         ),
-        title: Text('My Portfolio',
+        title: Text('My Resume',
             style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.w800,

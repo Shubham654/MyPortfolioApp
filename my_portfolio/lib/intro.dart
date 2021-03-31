@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:my_portfolio/about_myself.dart';
 
 import 'package:my_portfolio/contact.dart';
-import 'package:my_portfolio/contact_me.dart';
+import 'package:my_portfolio/MyResume.dart';
 
 import 'package:url_launcher/url_launcher.dart';
 

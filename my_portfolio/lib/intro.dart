@@ -46,10 +46,10 @@ class _IntroState extends State<Intro> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 10),
+                    padding: const EdgeInsets.only(left: 10, top: 5),
                     child: Container(
-                      child: Image.asset("assets/images/hand.png",
-                          height: 60, width: 90),
+                      child: Image.asset("assets/images/wavehand.gif",
+                          height: 80, width: 80),
                     ),
                   ),
                 ],

@@ -20,5 +20,9 @@ following are the pub file wich I used:
   
   flutter_native_splash: ^1.1.5+1
   
- 
- 
+Here are some glance to my app:
+
+![image](https://user-images.githubusercontent.com/59397280/113394467-eed17480-93b5-11eb-8aa5-b83dfd66a1b3.png)
+
+
+![image](https://user-images.githubusercontent.com/59397280/113394534-0b6dac80-93b6-11eb-8f0d-c8f48ec7e8c0.png)

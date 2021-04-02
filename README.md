@@ -22,7 +22,5 @@ following are the pub file wich I used:
   
 Here are some glance to my app:
 
-![image](https://user-images.githubusercontent.com/59397280/113394467-eed17480-93b5-11eb-8aa5-b83dfd66a1b3.png)
+![image](https://user-images.githubusercontent.com/59397280/113414452-a8424100-93da-11eb-80ef-50cc24873dac.png)                                                                       ![image](https://user-images.githubusercontent.com/59397280/113414411-906abd00-93da-11eb-9bf1-c31991f21a42.png)
 
-
-![image](https://user-images.githubusercontent.com/59397280/113394534-0b6dac80-93b6-11eb-8f0d-c8f48ec7e8c0.png)

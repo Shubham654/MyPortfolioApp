@@ -44,7 +44,7 @@ flutter_icons:
   image_path: "assets/icons/devv.png"
 
 flutter_native_splash:
-  image: assets/icons/clean.png
+  image: assets/icons/merge.png
   color: "ffffff"
   
   
